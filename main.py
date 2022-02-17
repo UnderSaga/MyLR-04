@@ -36,8 +36,16 @@ def dublicate(d1):
 
 
 def dublicate_2(d1):
-    pass
+    if len(d1) == 0:
+        print('Дубликатов нет')
+    else:
+        for filename, ways in d1.items():
+            size = path.getsize(ways[0])
+            print(size)
+            for x in ways:
+                print(x)
+            print()
 
-
+            
 if __name__ == '__main__':
-    input_n()
+    dublicate_2(dublicate(dictionary(input_n())))
