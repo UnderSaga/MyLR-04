@@ -46,7 +46,6 @@ def dublicate_2(d1):
                 print(x)
             print()
 
-
-
+            
 if __name__ == '__main__':
-    input_n()
+    dublicate_2(dublicate(dictionary(input_n())))
