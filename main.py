@@ -21,7 +21,18 @@ def dictionary(n):
 
 
 def dublicate(d1):
-    pass
+    dubl = {}
+    for way, size in d1.items():
+        name1 = str(path.basename(way)) + '_' + str(size)
+        if name1 in dubl.keys():
+            dubl.get(name1).append(way)
+        else:
+            dubl[name1] = [way]
+    d1.clear()
+    for name1, filesize in dubl.items():
+        if len(filesize) > 1:
+            d1[name1] = filesize
+    return d1
 
 
 def dublicate_2(d1):
